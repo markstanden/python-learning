@@ -103,7 +103,7 @@ def start(diff):
             start(5)
 
 def finish(diff):
-    print(f"level: {diff}")
+    #print(f"level: {diff}")
     print("You take the key and torches around the room illuminate.")
     print("You are wearing a ninja outfit, and it seems you have passed a test on the way to being a supreme ninja.")
     print("You can use the key to open the door to the left - marked 'Gold Store' or to the right marked 'Weapons'")
