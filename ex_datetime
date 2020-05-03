@@ -1,0 +1,8 @@
+import datetime
+
+count=0
+for i in datetime.date.today():
+    count += 1
+    print(f"Today data {count}: {i}")
+
+print ("end.")
