@@ -12,5 +12,6 @@ for letters in string_to_reverse:
 #display full word backwards
 print(backwards_string)
 
+#Pythonista way!
 print (backwards_string[::-1])
-print (string_to_reverse[3:1:-1])
+#print (string_to_reverse[3:1:-1])
