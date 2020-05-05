@@ -58,8 +58,8 @@ def start(diff):
         #infinite loop until numbers cleanly divide
         while (question_p1 % question_p2 != 0) or (question_p1 == question_p2):
             #print (question_p1 % question_p2)
-            question_p1 = int(randint(1 ,int(diff)))
-            question_p2 = int(randint(2, int(diff)))
+            question_p1 = int(randint(1 ,int(diff*5)))
+            question_p2 = int(randint(2, int(diff*5)))
     
     #display question
     print(f"""\n
@@ -88,12 +88,14 @@ def start(diff):
     print("What do you think the answer is?")
     user_answer = input(prompt)
     
-    if diff < (max_diff - 1) and int(user_answer) == int(question_answer):
+    if (diff + 5) < max_diff and int(user_answer) == int(question_answer):
         print("Correct, increasing difficulty...")
         start(diff + 5)
-        
-    elif diff >= (max_diff - 1) and int(user_answer) == int(question_answer):
+    elif (diff + 5) == max_diff and int(user_answer) == int(question_answer):
         print(f"Correct, and you have reached level {max_diff}.  I shall release the key...\n  Well done.")
+        finish(int(diff_arg))     
+    elif (diff + 5) > max_diff and int(user_answer) == int(question_answer):
+        print(f"Correct, and you have passed level {max_diff}.  I shall release the key...\n  Well done.")
         finish(int(diff_arg))
     else:
         print("Let's try again, but perhaps a little easier...")
