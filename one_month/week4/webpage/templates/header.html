@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>
+			{% if title=='Homepage' %}
+			Homepage | Badger and Bear
+			{% elif title=='About' %}
+			About Us | Badger and Bear
+			{% elif title=='Contact' %}
+			Contact Us | Badger and Bear
+			{% else %}
+			Badger and Bear
+			{% endif %}
+		</title>
+	</head>
+	<body>
+		<a href="/"> |  Home  | </a>
+		<a href="/about"> |  About Me  | </a>
+		<a href="/contact"> |  Contact  | </a>
